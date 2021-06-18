@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<div class="p-4">
+    <div class="container">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <!-- Post content-->
+                    <div class="col-lg-8">
+                        <!-- Title-->
+                        <h1 class="mt-4">{{ page.title }}</h1>
+                        <!-- Date and time-->
+                        <p>📅 {{ page.date | date_to_long_string }} tarihinde eklendi</p>
+                        <br />
+                        <!-- Preview image-->
+                        <img class="img-fluid rounded" src="//placekitten.com/380/335" alt="{{ page.title }}" />
+                        <br /><br />
+                        <!-- Post content-->
+                        <p class="lead">{{ page.content }}</p>
+                    </div>
+                    <!-- Sidebar widgets column-->
+                    <div class="col-md-4">
+                        <!-- Side widget-->
+                        <div class="card border-primary my-4">
+                            <h5 class="card-header">{{ page.name }}</h5>
+                            <div class="card-body">
+                                <p>{{ page.gender }}</p>
+                                <p>{{ page.race }}</p>
+                                <p>{{ page.age }}</p>
+                            </div>
+                        </div>
+
+                        <div class="card border-danger my-4">
+                            <h5 class="card-header">Uyarı</h5>
+                            <div class="card-body">
+                                <h4 class="card-title">ÜCRET İSTENİRSE GÜVENMEYİN!</h4>
+                                Kargo/taşıma ücreti dahil herhangi bir sebeple ücret isteyen kişilere güvenmeyin.
+                            </div>
+                        </div>
+
+                        {% include share.html %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

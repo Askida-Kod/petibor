@@ -1,0 +1,73 @@
+---
+layout: default
+title: ""
+---
+
+<!-- Header-->
+<header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-12">
+                <h1 class="d-none d-md-block display-4 text-white mt-5 mb-2">Çevre ve Sokak Hayvanları Derneği</h1>
+                <h1 class="d-md-none text-white mt-5 mb-2">Çevre ve Sokak Hayvanları Derneği</h1>
+                <p class="lead mb-5 text-white-50">
+                    Çevre ve Sokak Hayvanları Derneği, sokak hayvanlarına hizmet vermek amacıyla Beşiktaş’ta 1997
+                    yılında kurulan bir dernektir.
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Page Content-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mb-5">
+            <h2>Evlat Edin</h2>
+            <hr />
+            <p>
+                Gönüllülerin bağışları ile sokak canları için çalışıyoruz. Her türlü yardımlarınız ve can sahiplenme için bize ulaşabilirsiniz.
+            </p>
+            <p>
+                Kliniklerinde tedavi, aşılama ve kısırlaştırma operasyonları yapılmakla birlikte; kaza kurbanı
+                hayvanlar tedavi ediliyor, sahipsiz kedi ve köpeklerin yuva bulmasına yardımcı oluyorlar. Amaçları,
+                sesi olmayan bir topluluğun sesi olmak ve sokak hayvanlarının sözcülüğünü yapmaktır.
+            </p>
+            <p>
+                Hayvan bakımevi, devlet ya da özel kuruluşlar tarafından işletilen, genellikle sokakta yetişmiş,
+                kayıp olmuş ya da sahipleri tarafından dışlanmış hayvanlara sığınacak geçici bir yer sağlamak için,
+                genellikle hayvan hakları savunucularının ve hayvan severlerin desteğiyle faaliyetlerine devam
+                etmektedirler.
+            </p>
+            
+        </div>
+        <div class="col-md-4 mb-5">
+            <img class="rounded img-fluid" src="//placekitten.com/380/335" alt="Kedi Evlat Edin" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>İlanlar</h2>
+        </div>
+        <div id="gridPets" class="col-md-4 mb-5">
+            {% for pet in site.posts %}
+            <div class="card h-100">
+                <a href="{{ pet.url | prepend: site.baseurl }}">
+                    {% if pet.image and pet.image != "" %}
+                    <img class="card-img-top" src="{{ pet.image | prepend: site.baseurl }}" alt="{{ pet.title }}" />
+                    {% else %}
+                    <img class="card-img-top" src="//placekitten.com/380/335" alt="{{ pet.title }}" />
+                    {% endif %}                    
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title"><a href="{{ pet.url | prepend: site.baseurl }}">{{ pet.title }}</a></h4>
+                    <p class="card-text">{{ pet.content | truncatewords: 20, "..." }}</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary btn-lg mr-2" href="{{ pet.url | prepend: site.baseurl }}">🐈 Evlat Edin</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
