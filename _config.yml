@@ -60,7 +60,7 @@ defaults:
 # 6. Site settings
 encoding: utf-8
 lang: tr
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://pet.olcay.dev" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Çevre ve Sokak Hayvanları Derneği" # the name of your site, e.g. ACME Corp.
 tagline: "kedi,köpek,barınak,dernek,hayvan,hayvan sahiplen"
@@ -86,10 +86,6 @@ prose:
     - /js
   metadata:
     _posts:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "post"
       - name: "title"
         field:
           element: "text"
@@ -125,7 +121,7 @@ prose:
           label: "Yaşı"
           alterable: true
           options:
-            - name: 'Yavru (0 - 6 Aylık)'
+            - name: 'Baby'
               value: 'Yavru (0 - 6 Aylık)'
             - name: 'Genç (6 Aylık - 2 Yaş)'
               value: 'Genç (6 Aylık - 2 Yaş)'
