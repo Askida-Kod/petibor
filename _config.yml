@@ -1,0 +1,21 @@
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "ACME Corp." # the name of your site, e.g. ACME Corp.
+
+sass:
+  sass_dir: assets/css
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+#_config.yml
+tagline: "An awesome tagline"
+email: your.email@gmail.com
+description: >-
+ Add description here
+author: name
+google_analytics: UA-111111111-1
+twitter:
+  username: 
+  card: summary #keep this to generate a twitter share card
