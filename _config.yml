@@ -70,7 +70,7 @@ description: >-
 repo: "https://github.com/otomatikmuhendis/petibor"
 
 
-# 7. Prose settings
+# 7. Prose.io settings
 prose:
   rooturl: '_posts'
   media: 'images'
@@ -121,7 +121,7 @@ prose:
           label: "Yaşı"
           alterable: true
           options:
-            - name: 'Baby'
+            - name: 'Yavru (0 - 6 Aylık)'
               value: 'Yavru (0 - 6 Aylık)'
             - name: 'Genç (6 Aylık - 2 Yaş)'
               value: 'Genç (6 Aylık - 2 Yaş)'

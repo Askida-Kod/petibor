@@ -26,7 +26,8 @@ title: ""
             <h2>Evlat Edin</h2>
             <hr />
             <p>
-                Gönüllülerin bağışları ile sokak canları için çalışıyoruz. Her türlü yardımlarınız ve can sahiplenme için bize ulaşabilirsiniz.
+                Gönüllülerin bağışları ile sokak canları için çalışıyoruz. Her türlü yardımlarınız ve can sahiplenme
+                için bize ulaşabilirsiniz.
             </p>
             <p>
                 Kliniklerinde tedavi, aşılama ve kısırlaştırma operasyonları yapılmakla birlikte; kaza kurbanı
@@ -39,7 +40,7 @@ title: ""
                 genellikle hayvan hakları savunucularının ve hayvan severlerin desteğiyle faaliyetlerine devam
                 etmektedirler.
             </p>
-            
+
         </div>
         <div class="col-md-4 mb-5">
             <img class="rounded img-fluid" src="//placekitten.com/380/335" alt="Kedi Evlat Edin" />
@@ -51,22 +52,25 @@ title: ""
         </div>
         <div id="gridPets" class="col-md-4 mb-5">
             {% for pet in site.posts %}
-            <div class="card h-100">
-                <a href="{{ pet.url | prepend: site.baseurl }}">
-                    {% if pet.image and pet.image != "" %}
-                    <img class="card-img-top" src="{{ pet.image | prepend: site.baseurl }}" alt="{{ pet.title }}" />
-                    {% else %}
-                    <img class="card-img-top" src="//placekitten.com/380/335" alt="{{ pet.title }}" />
-                    {% endif %}                    
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title"><a href="{{ pet.url | prepend: site.baseurl }}">{{ pet.title }}</a></h4>
-                    <p class="card-text">{{ pet.content | truncatewords: 20, "..." }}</p>
-                </div>
-                <div class="card-footer">
-                    <a class="btn btn-primary btn-lg mr-2" href="{{ pet.url | prepend: site.baseurl }}">🐈 Evlat Edin</a>
-                </div>
-            </div>
+                {% if pet.published %}
+                    <div class="card h-100">
+                        <a href="{{ pet.url | prepend: site.baseurl }}">
+                            {% if pet.image and pet.image != "" %}
+                            <img class="card-img-top" src="{{ pet.image | prepend: site.baseurl }}" alt="{{ pet.title }}" />
+                            {% else %}
+                            <img class="card-img-top" src="//placekitten.com/380/335" alt="{{ pet.title }}" />
+                            {% endif %}
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="{{ pet.url | prepend: site.baseurl }}">{{ pet.title }}</a></h4>
+                            <p class="card-text">{{ pet.content | truncatewords: 20, "..." }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-primary btn-lg mr-2" href="{{ pet.url | prepend: site.baseurl }}">🐈 Evlat
+                                Edin</a>
+                        </div>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
