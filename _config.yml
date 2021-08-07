@@ -98,6 +98,12 @@ prose:
           label: "İsmi"
           placeholder: "İsmi"
           alterable: true
+      - name: "instagram"
+        field:
+          element: "text"
+          label: "Instagram"
+          placeholder: "Instagram paylaşımının adresi"
+          alterable: true
       - name: "image"
         field:
           element: "text"
